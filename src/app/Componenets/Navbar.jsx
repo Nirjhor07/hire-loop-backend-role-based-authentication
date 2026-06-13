@@ -28,7 +28,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            <Link href="/signin" className="hover:text-blue-600 transition">
+            <Link href="/auth/login" className="hover:text-blue-600 transition">
               <Button variant="primary">Sign In</Button>
             </Link>
            <Link href="#post-job" className="hover:text-blue-600 transition">
