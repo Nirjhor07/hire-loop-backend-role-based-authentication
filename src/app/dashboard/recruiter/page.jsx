@@ -14,6 +14,7 @@ const RecruiterPage = () => {
       </div>
     );
   }
+  
   return (
     <div className="flex-1">
       <h1 className="text-2xl font-bold text-center p-2">

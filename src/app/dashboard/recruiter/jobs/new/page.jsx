@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { Xmark, ArrowUpFromLine, Globe, ChevronDown } from "@gravity-ui/icons";
 import { Button, Form } from "@heroui/react";
-import { redirect } from "next/navigation";
 import { createCompanyNewJobRecriter } from "@/lib/actions/jobs";
 
 // Changed "export function" to "export default function"
