@@ -16,7 +16,7 @@ const RecruiterPage = () => {
   }
   return (
     <div className="flex-1">
-      <h1 className="text-2xl font-bold  p-2">
+      <h1 className="text-2xl font-bold text-center p-2">
         Welcome <span className="text-blue-500">{user?.name}</span> to the
         Recruiter Dashboard
       </h1>
