@@ -1,3 +1,4 @@
+import JobsTable from "@/app/Componenets/Dashboard/JobsTable";
 import { getjobsByRecruiter } from "@/lib/api/getJobs";
 
 const JobsPage = async () => {
@@ -6,9 +7,10 @@ const JobsPage = async () => {
     const jobs = await getjobsByRecruiter(company_id, status);
     console.log(jobs); // Log the fetched jobs for debugging
     return (
-        <div>
-            <h1 className="text-2xl font-bold p-4">Jobs Page</h1>
-        </div>
+      <div>
+        <h1 className="text-2xl font-bold p-4">Jobs Page</h1>
+        <JobsTable jobs={jobs} />
+      </div>
     );
 };
 
