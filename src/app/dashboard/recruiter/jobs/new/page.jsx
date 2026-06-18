@@ -77,6 +77,32 @@ export default function Page() {
           onSubmit={onSubmit}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5 w-full">
+            {/* active status */}
+            {/* Job Status Selection */}
+            <div className="flex flex-col gap-1.5 relative">
+              <label className="text-sm font-medium text-neutral-300">
+                Job Status
+              </label>
+              <div className="relative w-full">
+                <select
+                  required
+                  name="status"
+                  defaultValue="active"
+                  className="w-full h-10 pl-3 pr-10 rounded-xl bg-[#1c1c1c] border border-[#2b2b2b] text-white hover:bg-[#222222] focus:outline-none focus:border-neutral-500 transition appearance-none text-sm"
+                >
+                  <option value="active" className="bg-[#1c1c1c]">
+                    Active (Go Live)
+                  </option>
+                  <option value="inactive" className="bg-[#1c1c1c]">
+                    Inactive (Draft)
+                  </option>
+                </select>
+                <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                  <ChevronDown className="w-4 h-4 text-neutral-400" />
+                </div>
+              </div>
+            </div>
+
             {/* Company Name */}
             <div className="flex flex-col gap-1.5">
               <label className="text-sm font-medium text-neutral-300">
@@ -86,6 +112,18 @@ export default function Page() {
                 required
                 name="companyName"
                 placeholder="e.g. Acme Corp"
+                className="w-full h-10 px-3 rounded-xl bg-[#1c1c1c] border border-[#2b2b2b] text-white placeholder:text-neutral-600 hover:bg-[#222222] focus:outline-none focus:border-neutral-500 transition text-sm"
+              />
+            </div>
+            {/* Company Id */}
+            <div className="flex flex-col gap-1.5">
+              <label className="text-sm font-medium text-neutral-300">
+                Company Id
+              </label>
+              <input
+                required
+                name="companyId"
+                placeholder="e.g. ACME123"
                 className="w-full h-10 px-3 rounded-xl bg-[#1c1c1c] border border-[#2b2b2b] text-white placeholder:text-neutral-600 hover:bg-[#222222] focus:outline-none focus:border-neutral-500 transition text-sm"
               />
             </div>
