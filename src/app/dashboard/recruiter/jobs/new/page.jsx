@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Xmark, ArrowUpFromLine, Globe, ChevronDown } from "@gravity-ui/icons";
 import { Button, Form } from "@heroui/react";
 import { redirect } from "next/navigation";
+import { createCompanyNewJobRecriter } from "@/lib/actions/jobs";
 
 // Changed "export function" to "export default function"
 export default function Page() {
@@ -37,24 +38,6 @@ export default function Page() {
     e.currentTarget.reset();
     setLogoFile(null);
     // Here you can also implement the actual API call to submit the form data
-    const createCompanyNewJobRecriter = async (values) => {
-      // Implementation for creating new job
-      const res = await fetch("http://localhost:5000/api/jobs", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
-      if (res.ok) {
-        alert("Company registered successfully!");
-        redirect("/dashboard/recruiter/jobs");
-      } else {
-        alert("Failed to register company. Please try again.");
-      }
-    //   console.log(res);
-      return res.json();
-    };
     createCompanyNewJobRecriter(values);
   };
 
